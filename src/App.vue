@@ -1,8 +1,8 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png" />
-    <h1>Vue Music</h1>
-  </div>
+<template lang="pug">
+  #app
+    img(src="./assets/logo.png")
+    h1 Vue Music
+    p {{ msg }}
 </template>
 
 <script>
