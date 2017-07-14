@@ -1,5 +1,6 @@
 <template lang="pug">
   #app
+    VMHeader
     section.section
       nav.nav.has-shadow
         .container
@@ -13,13 +14,17 @@
         .columns
           .column(v-for="t in tracks")
             | {{ t.name }} - {{ t.artists[0].name }}
+    VMFooter
 </template>
 
 <script>
 import trackService from './services/track'
+import VMFooter from './components/layout/Footer.vue'
+import VMHeader from './components/layout/Header.vue'
 
 export default {
   name: 'app',
+  components: { VMFooter, VMHeader },
   data () {
     return {
       searchQuery: '',
